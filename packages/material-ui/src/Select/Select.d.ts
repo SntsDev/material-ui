@@ -1,5 +1,6 @@
+import { SxProps } from '@material-ui/system';
 import * as React from 'react';
-import { InternalStandardProps as StandardProps } from '..';
+import { InternalStandardProps as StandardProps, Theme } from '..';
 import { InputProps } from '../Input';
 import { MenuProps } from '../Menu';
 import { SelectInputProps } from './SelectInput';
@@ -148,6 +149,10 @@ export interface SelectProps<T = unknown>
    * Props applied to the clickable div element.
    */
   SelectDisplayProps?: React.HTMLAttributes<HTMLDivElement>;
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx?: SxProps<Theme>;
   /**
    * The `input` value. Providing an empty string will select no options.
    * Set to an empty string `''` if you don't want any of the available options to be selected.
